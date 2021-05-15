@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import{FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
+//this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
+    //this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   componentDidUpdate() { }
@@ -19,40 +21,43 @@ class Header extends Component {
 
   tick() {
     // this.state = {date : new Date()};
-    this.setState({ date: new Date() });
+   // this.setState({ date: new Date() });
   }
 
   render() {
     return (
 
-      <div className="container-fluid bg-dark">
+      <div className="container-fluid bg-white">
        <div className="row">
-          <div className="col-md-5 col-12 text-md-left text-center d-none d-md-block">
-            <h1 className="text-white mt-md-3 ml-md-5">
-              <img style={{ height: 80 }} src="/images/logo/logo.jpg"/>
-            </h1>
-              
+          <div className="col-md-4 col-12 ">
           </div>
-          <div className="col-md-3 col-12 text-md-left text-center">
+          <div className="col-md-4 col-12 text-md-left text-center">
             <h1 className="text-white mt-md-4 mt-2">
-              PANEE SHOP
+            <img style={{ height: 100 }} src="/images/logo/logo.png"/>
             </h1>
           </div>
-          <div className="col-md-4 col-12 text-md-right text-center mt-md-3">
-            <ul className="list-inline">
-                <li className="list-inline-item title"><Link className="text-white" to="">หน้าหลัก</Link></li>
-                <li className="list-inline-item title">|</li>
-                <li className="list-inline-item title"><Link className="text-white" to="/orders">รายการสั่งซื้อ</Link></li>
-                <li className="list-inline-item title">|</li>
-                <li className="list-inline-item title"><Link className="text-white" to="/products">สินค้า</Link></li>
-                <li className="list-inline-item title">|</li>
-                <li className="list-inline-item title"><Link className="text-white" to="/about">ออกจากระบบ</Link></li>
-            </ul>  
-            <h5 className="text-white">
-                {this.state.date.toLocaleTimeString()}
-            </h5>
+          <div className="col-md-4">
           </div>
-        </div>
+          </div>
+          <div className="row">
+          <div className="col-md-4 col-12 ">
+          </div>
+          <div className="col-md-4 col-12 text-md-left text-center">
+            <ul className="list-inline">
+            <li className="list-inline-item title"><button type="button" class="btn btn-white"> 
+               <Link className="text-success" to="" style={{fontSize:"25px"}}> <FontAwesomeIcon icon={['fas', 'user']}  size="lg"/></Link></button></li>
+                <li className="list-inline-item title"><button type="button" class="btn btn-white"> 
+               <Link className="text-success" to="" style={{fontSize:"25px"}}> <FontAwesomeIcon icon={['fas', 'comment']}  size="lg"/></Link></button></li>
+               <li className="list-inline-item title"><button type="button" class="btn btn-white"> 
+               <Link className="text-success" to="" style={{fontSize:"25px"}}> <FontAwesomeIcon icon={['fas', 'user-plus']}  size="lg"/></Link></button></li>
+
+            </ul>  
+         
+          </div>
+          <div className="col-md-4">
+          </div>
+          </div>
+      
         <hr /> 
       </div>
     );

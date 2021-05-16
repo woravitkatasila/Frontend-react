@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Login from "../components/Login/Loginform";
-class Loginform extends Component {
+import Loginform from "../components/Login/Loginform";
+class Login extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -15,5 +15,10 @@ class Loginform extends Component {
 	}
 }
 
+/*
+function mapStateToProps({ users }) {
+	return { users };
+}
 
+export default withRouter(connect(mapStateToProps, { productsFetch, productDelete })(Loginform));*/
 export default Login;

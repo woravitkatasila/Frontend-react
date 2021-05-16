@@ -3,6 +3,8 @@ import { Component } from "react";
 class Moniter extends Component {
     constructor(props) {
         super(props)
+        console.log("sdsd")
+        console.log(this.props.users)
     }
     render() {
         return (
@@ -14,6 +16,7 @@ class Moniter extends Component {
                         </div>
                         <div className="col-md-6">
                             dddddd
+                        
                         </div>
                     </div>
                 </div>
